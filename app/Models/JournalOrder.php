@@ -9,14 +9,17 @@ class JournalOrder extends Model
 {
     use HasFactory;
 
-    protected $fillable = [ 'start_date', 
+    protected $fillable = [
+                            'start_date', 
                             'end_late', 
                             'positions_id', 
                             'type_orders_id', 
                             'summary', 
                             'fio_id', 
                             'personnel_num', 
-                            'base' ];
+                            'base',
+                            'updated_at',
+                            'created_at' ];
     
     public function Positions() {
         return $this->belongsTo(position::class, "positions_id", "id");

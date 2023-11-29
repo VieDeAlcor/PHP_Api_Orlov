@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\PersonalCard;
 
-class PersonalCardController extends Controller
+class PersonalCardsController extends Controller
 {
     public function index()
     {
