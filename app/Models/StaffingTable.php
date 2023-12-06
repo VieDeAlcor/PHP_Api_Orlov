@@ -9,6 +9,5 @@ class StaffingTable extends Model
 {
     use HasFactory;
 
-    protected $fillable = [ 'period',
-                            'date_period'];
+    protected $fillable = [ 'period' ];
 }

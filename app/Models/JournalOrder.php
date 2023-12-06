@@ -11,25 +11,23 @@ class JournalOrder extends Model
 
     protected $fillable = [
                             'start_date', 
-                            'end_late', 
+                            'end_date', 
                             'positions_id', 
                             'type_orders_id', 
                             'summary', 
                             'fio_id', 
                             'personnel_num', 
-                            'base',
-                            'updated_at',
-                            'created_at' ];
+                            'base' ];
     
     public function Positions() {
-        return $this->belongsTo(position::class, "positions_id", "id");
+        return $this->belongsTo(Position::class, "positions_id", "id");
     }
     
     public function TypeOrder() {
-        return $this->belongsTo(typeorder::class, "type_orders_id", "id");
+        return $this->belongsTo(TypeOrder::class, "type_orders_id", "id");
     }  
 
     public function FIO() {
-        return $this->belongsTo(personalcard::class, "fio_id", "id");
+        return $this->belongsTo(PersonalCard::class, "fio_id", "id");
     }  
 }

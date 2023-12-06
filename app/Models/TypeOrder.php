@@ -9,5 +9,5 @@ class TypeOrder extends Model
 {
     use HasFactory;
 
-    protected $fillable = [ 'number' ];
+    protected $fillable = [ 'number'];
 }

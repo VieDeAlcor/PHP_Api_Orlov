@@ -15,26 +15,17 @@ class PersonalCard extends Model
                             'citizenship', 
                             'education_id', 
                             'position_id', 
-                            'subdivision_id', 
-                            'pass_serial',
-                            'pass_num',
-                            'pass_issued',
-                            'pass_place',
-                            'fact_place',
-                            'date_reg',
-                            'num_phone',
-                            'date_dismiss',
-                            'grounds_dismiss' ];
+                            'subdivision_id' ];
 
     public function Educations() {
-        return $this->belongsTo(typeeducation::class, "education_id", "id");
+        return $this->belongsTo(TypeEducation::class, "education_id", "id");
     }
     
     public function Positions() {
-        return $this->belongsTo(position::class, "positions_id", "id");
+        return $this->belongsTo(Position::class, "positions_id", "id");
     }  
 
     public function Subdivisions() {
-        return $this->belongsTo(subdivision::class, "subdivision_id", "id");
+        return $this->belongsTo(Subdivision::class, "subdivision_id", "id");
     }  
 }
