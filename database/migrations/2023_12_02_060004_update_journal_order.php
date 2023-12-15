@@ -23,18 +23,6 @@ return new class extends Migration
         Schema::table('staffing_tables', function(Blueprint $table) {
             $table->timestamps();
         });
-        Schema::table('subdivisions', function(Blueprint $table) {
-            $table->timestamps();
-        });
-        Schema::table('type_educations', function(Blueprint $table) {
-            $table->timestamps();
-        });
-        Schema::table('type_orders', function(Blueprint $table) {
-            $table->timestamps();
-        });
-        Schema::table('work_books', function(Blueprint $table) {
-            $table->timestamps();
-        });
 
     }
 

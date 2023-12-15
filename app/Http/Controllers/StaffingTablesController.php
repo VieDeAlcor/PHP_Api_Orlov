@@ -28,7 +28,9 @@ class StaffingTablesController extends Controller
     {
         $event = New Staffingtable;
         
-        $event->period = $request->period;
+        $event->name = $request->name;
+        $event->position_name = $request->position_name;
+        $event->position_id = $request->position_id;
         $event->updated_at = $request->updated_at;
         $event->created_at = $request->created_at;
         
